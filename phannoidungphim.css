@@ -1,0 +1,470 @@
+/* * {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+
+  font-family: Arial, Helvetica, sans-serif;
+
+  color: #e8edf7;
+
+  background:
+    radial-gradient(
+      circle at 15% 10%,
+      rgba(40, 100, 255, 0.16),
+      transparent 30%
+    ),
+    #080b14;
+
+  min-height: 100vh;
+}
+
+body > a:first-child {
+  display: block;
+
+  width: 90%;
+  max-width: 1100px;
+
+  margin: 25px auto 0;
+
+  color: #9bbcff;
+
+  text-decoration: none;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  transition: 0.2s;
+}
+
+body > a:first-child:hover {
+  color: white;
+}
+
+body > h2 {
+  width: 90%;
+  max-width: 1100px;
+
+  margin: 35px auto 15px;
+
+  color: white;
+
+  font-size: 30px;
+
+  font-weight: 800;
+}
+
+body > hr {
+  width: 90%;
+  max-width: 1100px;
+
+  margin: 0 auto 35px;
+
+  border: none;
+
+  height: 1px;
+
+  background: rgba(255, 255, 255, 0.1);
+}
+
+body > img {
+  display: block;
+
+  width: 230px;
+  height: 330px;
+
+  object-fit: cover;
+
+  margin: 0;
+
+  border-radius: 12px;
+
+  box-shadow:
+    0 15px 35px rgba(0, 0, 0, 0.5),
+    0 0 0 1px rgba(255, 255, 255, 0.08);
+}
+
+body > img {
+  margin-left: calc((100% - min(1100px, 90%)) / 2);
+}
+
+body > img + p {
+  margin-left: calc((100% - min(1100px, 90%)) / 2 + 270px);
+  margin-top: -330px;
+
+  width: min(800px, calc(90% - 270px));
+
+  color: white;
+
+  font-size: 28px;
+
+  font-weight: 800;
+
+  line-height: 1.3;
+}
+
+body > img ~ p:not(:last-of-type) {
+  margin-left: calc((100% - min(1100px, 90%)) / 2 + 270px);
+
+  width: min(800px, calc(90% - 270px));
+
+  margin-top: 12px;
+
+  color: #aeb8cc;
+
+  font-size: 15px;
+
+  line-height: 1.7;
+}
+
+body > img ~ p b {
+  color: #ffffff;
+}
+
+body > button {
+  display: block;
+
+  margin-left: calc((100% - min(1100px, 90%)) / 2 + 270px);
+
+  margin-top: 25px;
+
+  padding: 0;
+
+  border: none;
+
+  border-radius: 10px;
+
+  overflow: hidden;
+
+  background: transparent;
+}
+
+body > a button h4 {
+  margin: 0;
+
+  padding: 12px 35px;
+
+  color: white;
+
+  font-size: 16px;
+
+  background: linear-gradient(135deg, #2878ff, #6148ff);
+
+  transition: 0.2s;
+
+  margin-left: 50px;
+}
+
+body > button:hover h4 {
+  transform: translateY(-2px);
+
+  filter: brightness(1.12);
+
+  box-shadow: 0 10px 30px rgba(40, 100, 255, 0.35);
+}
+
+body > h3 {
+  clear: both;
+
+  width: 90%;
+  max-width: 1100px;
+
+  margin: 70px auto 20px;
+
+  padding-bottom: 12px;
+
+  color: white;
+
+  font-size: 24px;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+body > h3 + p {
+  width: 90%;
+  max-width: 1100px;
+
+  margin: 0 auto 70px;
+
+  color: #aeb8cc;
+
+  font-size: 15px;
+
+  line-height: 1.9;
+
+  text-align: justify;
+}
+
+@media (max-width: 700px) {
+  body > img {
+    width: 200px;
+    height: 290px;
+
+    margin: 0 auto 25px;
+  }
+
+  body > img + p {
+    margin: 0 auto;
+
+    width: 90%;
+
+    text-align: center;
+
+    font-size: 23px;
+  }
+
+  body > img ~ p:not(:last-of-type) {
+    margin: 10px auto;
+
+    width: 90%;
+  }
+
+  body > button {
+    margin: 25px auto;
+  }
+
+  body > h3 {
+    margin-top: 45px;
+  }
+
+  body > h3 + p {
+    text-align: left;
+  }
+} */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+
+  font-family: Arial, Helvetica, sans-serif;
+
+  color: #e8edf7;
+
+  background:
+    radial-gradient(
+      circle at 15% 10%,
+      rgba(40, 100, 255, 0.16),
+      transparent 30%
+    ),
+    #080b14;
+
+  min-height: 100vh;
+}
+
+body > a:first-child {
+  display: block;
+
+  width: 90%;
+  max-width: 1100px;
+
+  margin: 25px auto 0;
+
+  color: #9bbcff;
+
+  text-decoration: none;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  transition: 0.2s;
+}
+
+body > a:first-child:hover {
+  color: white;
+}
+
+body > h2 {
+  width: 90%;
+  max-width: 1100px;
+
+  margin: 35px auto 15px;
+
+  color: white;
+
+  font-size: 30px;
+  font-weight: 800;
+}
+
+body > hr {
+  width: 90%;
+  max-width: 1100px;
+
+  margin: 0 auto 35px;
+
+  border: none;
+
+  height: 1px;
+
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.thongTinPhim {
+  display: flex;
+
+  width: 90%;
+  max-width: 1100px;
+
+  margin: 0 auto;
+
+  gap: 40px;
+}
+
+.thongTinPhim img {
+  width: 230px;
+  height: 330px;
+
+  object-fit: cover;
+
+  flex-shrink: 0;
+
+  border-radius: 12px;
+
+  box-shadow:
+    0 15px 35px rgba(0, 0, 0, 0.5),
+    0 0 0 1px rgba(255, 255, 255, 0.08);
+}
+
+.chiTietPhim {
+  flex: 1;
+}
+
+/* Tên phim */
+.chiTietPhim .tenPhim {
+  margin: 0 0 20px;
+
+  color: white;
+
+  font-size: 28px;
+  font-weight: 800;
+
+  line-height: 1.3;
+}
+
+/* Các thông tin phim */
+.chiTietPhim p {
+  margin: 0 0 12px;
+
+  color: #aeb8cc;
+
+  font-size: 15px;
+
+  line-height: 1.7;
+}
+
+/* Chữ in đậm */
+.chiTietPhim p b {
+  color: white;
+}
+
+/* Nút mua vé */
+.chiTietPhim a {
+  display: inline-block;
+
+  margin-top: 15px;
+
+  text-decoration: none;
+}
+
+.chiTietPhim button {
+  padding: 12px 35px;
+
+  border: none;
+  border-radius: 10px;
+
+  color: white;
+
+  font-size: 16px;
+  font-weight: bold;
+
+  background: linear-gradient(135deg, #2878ff, #6148ff);
+
+  cursor: pointer;
+
+  transition: 0.2s;
+}
+
+.chiTietPhim button:hover {
+  transform: translateY(-2px);
+
+  filter: brightness(1.12);
+
+  box-shadow: 0 10px 30px rgba(40, 100, 255, 0.35);
+}
+
+body > h3 {
+  width: 90%;
+  max-width: 1100px;
+
+  margin: 70px auto 20px;
+
+  padding-bottom: 12px;
+
+  color: white;
+
+  font-size: 24px;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* Đoạn nội dung bên dưới */
+body > h3 + p {
+  width: 90%;
+  max-width: 1100px;
+
+  margin: 0 auto 70px;
+
+  color: #aeb8cc;
+
+  font-size: 15px;
+
+  line-height: 1.9;
+
+  text-align: justify;
+}
+
+@media (max-width: 700px) {
+  .thongTinPhim {
+    flex-direction: column;
+
+    gap: 25px;
+  }
+
+  .thongTinPhim img {
+    width: 200px;
+    height: 290px;
+
+    margin: 0 auto;
+  }
+
+  .chiTietPhim .tenPhim {
+    text-align: center;
+
+    font-size: 23px;
+  }
+
+  .chiTietPhim {
+    width: 100%;
+  }
+
+  body > h3 {
+    margin-top: 45px;
+  }
+
+  body > h3 + p {
+    text-align: left;
+  }
+}
