@@ -10,7 +10,7 @@ if (gioPhim.length === 0) {
 
       <h3>Giỏ vé đang trống 😢</h3>
 
-      <a href="dangnhapxong.html">
+      <a href="./dangnhapxong.html">
         Quay lại chọn phim
       </a>
 

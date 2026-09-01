@@ -190,7 +190,7 @@
     <header class="header">
       <h2>THANH TOÁN VÉ XEM PHIM</h2>
 
-      <a href="giohang.html"> ← Quay lại giỏ vé </a>
+      <a href="./giohang.html"> ← Quay lại giỏ vé </a>
     </header>
 
     <main class="container">
@@ -257,7 +257,7 @@
           <div class="text-center mt-4">
             <p>Quét mã QR để thanh toán</p>
 
-            <img src="/qr.jpg" alt="Mã QR thanh toán" class="qr" />
+            <img src="./qr.jpg" alt="Mã QR thanh toán" class="qr" />
           </div>
         </div>
       </div>
@@ -383,7 +383,7 @@
                 tongTien.toLocaleString("vi-VN") +
                 "đ",
               setTimeout(function () {
-                window.location.href = "giohang.html";
+                window.location.href = "./giohang.html";
               }, 1000),
             );
 
@@ -392,11 +392,15 @@
 
           if (phuongThuc.value === "bank") {
             alert(
-              "Vui lòng chuyển khoản " +
+              "thanh toán thành công " +
+                // "Vui lòng chuyển khoản " +
                 tongTien.toLocaleString("vi-VN") +
                 "đ\n\n" +
                 "Nội dung: " +
                 maDonHang,
+              setTimeout(function () {
+                window.location.href = "./giohang.html";
+              }, 1000),
             );
           }
         });

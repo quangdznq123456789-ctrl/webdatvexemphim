@@ -95,7 +95,6 @@ function capNhatGheDaDat() {
 
 dates.forEach((date) => {
   date.addEventListener("click", function () {
-    // Bỏ active ngày cũ
     dates.forEach((item) => {
       item.classList.remove("active");
     });
@@ -233,9 +232,5 @@ continueBtn.addEventListener("click", function () {
       "đ",
   );
 
-  // ========================================
-  // SANG GIỎ HÀNG
-  // ========================================
-
-  window.location.href = "giohang.html";
+  window.location.href = "./giohang.html";
 });

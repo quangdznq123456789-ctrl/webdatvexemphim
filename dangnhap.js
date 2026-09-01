@@ -33,7 +33,7 @@ loginForm.addEventListener("submit", function (event) {
     );
 
     setTimeout(function () {
-      window.location.href = "dangnhapxong.html";
+      window.location.href = "./dangnhapxong.html";
     }, 1000);
   } else {
     loginMessage.textContent = "Số điện thoại hoặc mật khẩu không đúng!";

@@ -102,5 +102,5 @@ form.addEventListener("submit", function (event) {
 
   form.reset();
 
-  window.location.href = "indexdangnhap.html";
+  window.location.href = "./indexdangnhap.html";
 });
