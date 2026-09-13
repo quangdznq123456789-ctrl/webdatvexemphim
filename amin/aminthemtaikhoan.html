@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="stylesheet"
+      href="./bootstrap/bootstrap-5.3.8-dist/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="./aminthemphim.css" />
+
+    <title>Thêm tài khoản</title>
+  </head>
+
+  <body>
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+      <div class="logo">ADMIN QUẢN LÝ</div>
+
+      <nav class="menu">
+        <a href="./amintrangchu.html"> Quản lý phim </a>
+
+        <a href="./amintheloai.html"> Quản lý thể loại </a>
+
+        <a href="./aminuser.html" class="active"> Quản lý tài khoản </a>
+      </nav>
+
+      <div class="menu logout">
+        <a href="../index.html"> Đăng xuất </a>
+      </div>
+    </aside>
+
+    <!-- NỘI DUNG CHÍNH -->
+    <main class="main-content">
+      <!-- HEADER -->
+      <div class="page-header">
+        <h1 class="page-title">Thêm tài khoản</h1>
+
+        <div class="admin-info">👤 <strong>Quản trị viên</strong></div>
+      </div>
+
+      <!-- FORM THÊM TÀI KHOẢN -->
+      <div class="add-movie-container">
+        <div class="add-movie-box">
+          <h2>THÊM TÀI KHOẢN</h2>
+
+          <p class="subtitle">Nhập thông tin tài khoản mới vào hệ thống</p>
+
+          <form id="addAccountForm" onsubmit="themTaiKhoan(event)">
+            <!-- HỌ TÊN -->
+            <div class="form-group">
+              <label for="hoTen">Họ tên</label>
+
+              <input
+                type="text"
+                id="hoTen"
+                class="form-control"
+                placeholder="Nhập họ tên"
+                required
+              />
+            </div>
+
+            <!-- SỐ ĐIỆN THOẠI -->
+            <div class="form-group">
+              <label for="soDienThoai"> Số điện thoại </label>
+
+              <input
+                type="text"
+                id="soDienThoai"
+                class="form-control"
+                placeholder="Nhập số điện thoại"
+                required
+              />
+            </div>
+
+            <!-- MẬT KHẨU -->
+            <div class="form-group">
+              <label for="matKhau"> Mật khẩu </label>
+
+              <input
+                type="password"
+                id="matKhau"
+                class="form-control"
+                placeholder="Nhập mật khẩu"
+                required
+              />
+            </div>
+
+            <!-- THÔNG BÁO -->
+            <p id="addAccountMessage"></p>
+
+            <!-- NÚT -->
+            <div class="button-group">
+              <button type="submit" class="btn-add">THÊM TÀI KHOẢN</button>
+
+              <a href="./aminuser.html" class="btn-back"> QUAY LẠI </a>
+            </div>
+          </form>
+        </div>
+      </div>
+    </main>
+
+    <script src="./aminthemtaikhoan.js"></script>
+  </body>
+</html>

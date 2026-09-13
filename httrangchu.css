@@ -1,0 +1,668 @@
+/* =========================================
+   RESET
+========================================= */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+
+  font-family:
+    Inter,
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+
+  color: #ffffff;
+
+  background:
+    radial-gradient(
+      circle at 10% 10%,
+      rgba(54, 100, 255, 0.14),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 90% 80%,
+      rgba(130, 60, 255, 0.12),
+      transparent 30%
+    ),
+    #080b14;
+}
+
+/* =========================================
+   HEADER
+========================================= */
+
+.header-user {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 18px 5%;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+
+  background: rgba(8, 11, 20, 0.9);
+
+  position: sticky;
+  top: 0;
+
+  z-index: 100;
+}
+
+/* =========================================
+   MENU BÊN TRÁI
+========================================= */
+
+.menu-trai {
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
+}
+
+.menu-trai button {
+  padding: 9px 15px;
+
+  border: 1px solid rgba(255, 255, 255, 0.15);
+
+  border-radius: 8px;
+
+  background: transparent;
+
+  color: #cbd4e8;
+
+  font-size: 13px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.menu-trai button:hover {
+  color: #ffffff;
+
+  background: rgba(63, 130, 255, 0.15);
+
+  border-color: rgba(63, 130, 255, 0.5);
+
+  transform: translateY(-1px);
+}
+
+/* =========================================
+   MENU BÊN PHẢI
+========================================= */
+
+.menu-phai {
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
+}
+
+.menu-phai button {
+  padding: 9px 15px;
+
+  border: 1px solid rgba(255, 255, 255, 0.15);
+
+  border-radius: 8px;
+
+  background: transparent;
+
+  font-size: 13px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.menu-phai button:hover {
+  background: rgba(255, 255, 255, 0.1);
+
+  border-color: rgba(255, 255, 255, 0.3);
+
+  transform: translateY(-1px);
+}
+
+.menu-phai a {
+  color: #cbd4e8;
+
+  text-decoration: none;
+}
+
+.menu-phai button:hover a {
+  color: #ffffff;
+}
+
+/* =========================================
+   LỜI CHÀO
+========================================= */
+
+.hoHo {
+  margin: 28px auto 40px;
+
+  text-align: center;
+
+  font-size: 20px;
+
+  font-weight: 600;
+
+  color: #dce3f5;
+}
+
+/* =========================================
+   KHUNG DANH SÁCH PHIM
+========================================= */
+
+.movie-list {
+  width: min(1400px, 92%);
+
+  margin: 0 auto 70px;
+}
+
+/* =========================================
+   KHU VỰC PHIM
+========================================= */
+
+.khu-vuc-phim {
+  width: 100%;
+
+  margin-bottom: 65px;
+
+  scroll-margin-top: 90px;
+}
+
+/* =========================================
+   TIÊU ĐỀ "PHIM ĐANG CHIẾU"
+========================================= */
+
+.tieu-de-phim {
+  display: block;
+
+  width: 100%;
+
+  margin: 0 0 25px;
+
+  padding: 0 0 10px;
+
+  color: #ffffff;
+
+  font-size: 22px;
+
+  font-weight: 700;
+
+  line-height: 1.3;
+
+  text-align: left;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+/* =========================================
+   DANH SÁCH CARD PHIM
+
+   QUAN TRỌNG:
+   PHIM NẰM NGANG Ở ĐÂY
+========================================= */
+
+.ds-phim {
+  display: grid;
+
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+
+  gap: 24px 18px;
+
+  width: 100%;
+}
+
+/* =========================================
+   CARD PHIM
+========================================= */
+
+.ds-phim .main {
+  width: 100%;
+
+  min-width: 0;
+
+  padding: 12px;
+
+  margin: 0;
+
+  border-radius: 14px;
+
+  background: rgba(18, 23, 41, 0.82);
+
+  border: 1px solid rgba(255, 255, 255, 0.07);
+
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+
+  overflow: hidden;
+
+  transition:
+    transform 0.25s ease,
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+/* Hover */
+
+.ds-phim .main:hover {
+  transform: translateY(-6px);
+
+  border-color: rgba(91, 142, 255, 0.4);
+
+  box-shadow:
+    0 18px 40px rgba(0, 0, 0, 0.35),
+    0 0 20px rgba(63, 130, 255, 0.08);
+}
+
+/* =========================================
+   ẢNH PHIM
+========================================= */
+
+.ds-phim .main img {
+  width: 100%;
+
+  height: 280px;
+
+  display: block;
+
+  object-fit: cover;
+
+  border-radius: 9px;
+
+  margin: 0 0 12px;
+
+  transition:
+    transform 0.3s ease,
+    filter 0.3s ease;
+}
+
+.ds-phim .main:hover img {
+  transform: scale(1.03);
+
+  filter: brightness(1.07);
+}
+
+/* =========================================
+   TÊN PHIM
+========================================= */
+
+.ds-phim .main h4 {
+  margin: 8px 2px 10px;
+
+  min-height: 44px;
+
+  color: #ffffff;
+
+  font-size: 15px;
+
+  font-weight: 700;
+
+  line-height: 1.4;
+
+  text-transform: uppercase;
+}
+
+/* =========================================
+   THÔNG TIN PHIM
+========================================= */
+
+.ds-phim .main p {
+  margin: 5px 2px;
+
+  color: #9da7bf;
+
+  font-size: 12px;
+
+  line-height: 1.45;
+}
+
+/* =========================================
+   TRẠNG THÁI
+========================================= */
+
+.ds-phim .main strong {
+  color: #78aaff;
+}
+
+/* =========================================
+   NÚT ĐẶT VÉ
+========================================= */
+
+.ds-phim .main .btn {
+  width: 100%;
+
+  margin-top: 10px;
+
+  padding: 8px 10px;
+
+  border-radius: 8px;
+
+  font-size: 12px;
+
+  font-weight: 700;
+}
+
+/* =========================================
+   NÚT ĐẶT VÉ - VIỀN XANH
+========================================= */
+
+.ds-phim .main .btn-outline-primary {
+  color: #78aaff;
+
+  background: transparent;
+
+  border: 1px solid #4d8dff;
+
+  transition: 0.2s ease;
+}
+
+.ds-phim .main .btn-outline-primary:hover {
+  color: #ffffff;
+
+  background: linear-gradient(135deg, #3f82ff, #6a5cff);
+
+  border-color: transparent;
+
+  transform: translateY(-2px);
+
+  box-shadow: 0 8px 18px rgba(63, 130, 255, 0.2);
+}
+
+/* =========================================
+   PHIM NGỪNG CHIẾU
+========================================= */
+
+.khu-vuc-ngung {
+  margin-top: 10px;
+
+  padding-top: 10px;
+}
+
+/* Làm phim ngừng chiếu hơi mờ */
+
+.khu-vuc-ngung .main {
+  opacity: 0.65;
+}
+
+.khu-vuc-ngung .main:hover {
+  opacity: 0.85;
+}
+
+/* Chữ trạng thái ngừng chiếu */
+
+.khu-vuc-ngung .main strong {
+  color: #ff8585;
+}
+
+/* =========================================
+   ẨN BR CŨ
+========================================= */
+
+.movie-list > br,
+.ds-phim > br {
+  display: none;
+}
+
+/* =========================================
+   RESPONSIVE - LAPTOP
+========================================= */
+
+@media (max-width: 1200px) {
+  .ds-phim {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .ds-phim .main img {
+    height: 270px;
+  }
+}
+
+/* =========================================
+   RESPONSIVE - TABLET
+========================================= */
+
+@media (max-width: 900px) {
+  .header-user {
+    padding: 15px 4%;
+  }
+
+  .menu-trai,
+  .menu-phai {
+    gap: 7px;
+  }
+
+  .menu-trai button,
+  .menu-phai button {
+    padding: 8px 11px;
+
+    font-size: 11px;
+  }
+
+  .ds-phim {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+
+    gap: 18px 14px;
+  }
+
+  .ds-phim .main img {
+    height: 260px;
+  }
+
+  .tieu-de-phim {
+    font-size: 20px;
+  }
+}
+
+/* =========================================
+   RESPONSIVE - ĐIỆN THOẠI
+========================================= */
+
+@media (max-width: 650px) {
+  .header-user {
+    flex-direction: column;
+
+    align-items: stretch;
+
+    gap: 12px;
+
+    padding: 12px 15px;
+  }
+
+  .menu-trai,
+  .menu-phai {
+    justify-content: center;
+  }
+
+  .menu-trai button,
+  .menu-phai button {
+    font-size: 10px;
+
+    padding: 8px 10px;
+  }
+
+  .hoHo {
+    margin: 25px 15px 30px;
+
+    font-size: 17px;
+  }
+
+  .movie-list {
+    width: calc(100% - 30px);
+  }
+
+  .ds-phim {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 15px;
+  }
+
+  .ds-phim .main {
+    padding: 9px;
+
+    border-radius: 11px;
+  }
+
+  .ds-phim .main img {
+    height: 230px;
+
+    border-radius: 7px;
+  }
+
+  .ds-phim .main h4 {
+    font-size: 13px;
+
+    min-height: auto;
+  }
+
+  .ds-phim .main p {
+    font-size: 10px;
+  }
+}
+
+/* =========================================
+   ĐIỆN THOẠI RẤT NHỎ
+========================================= */
+
+@media (max-width: 400px) {
+  .ds-phim {
+    grid-template-columns: 1fr;
+  }
+
+  .ds-phim .main img {
+    height: 350px;
+  }
+}
+/* =========================================
+   TÌM KIẾM THEO THỂ LOẠI
+========================================= */
+
+.bo-loc-phim {
+  width: min(900px, 92%);
+
+  margin: 0 auto 45px;
+
+  display: flex;
+
+  gap: 12px;
+
+  align-items: center;
+}
+
+/* Ô tìm kiếm */
+
+#timKiemTheLoai {
+  flex: 1;
+
+  height: 44px;
+
+  padding: 0 16px;
+
+  border: 1px solid rgba(255, 255, 255, 0.15);
+
+  border-radius: 9px;
+
+  outline: none;
+
+  background: rgba(18, 23, 41, 0.85);
+
+  color: #ffffff;
+
+  font-size: 13px;
+
+  transition: 0.2s ease;
+}
+
+#timKiemTheLoai::placeholder {
+  color: #8993aa;
+}
+
+#timKiemTheLoai:focus {
+  border-color: #4d8dff;
+
+  box-shadow: 0 0 0 3px rgba(63, 130, 255, 0.1);
+}
+
+/* Select thể loại */
+
+#chonTheLoai {
+  width: 220px;
+
+  height: 44px;
+
+  padding: 0 14px;
+
+  border: 1px solid rgba(255, 255, 255, 0.15);
+
+  border-radius: 9px;
+
+  outline: none;
+
+  background: #121729;
+
+  color: #ffffff;
+
+  font-size: 13px;
+
+  cursor: pointer;
+}
+
+#chonTheLoai:focus {
+  border-color: #4d8dff;
+}
+
+/* Không tìm thấy */
+
+.khong-co-phim {
+  grid-column: 1 / -1;
+
+  width: 100%;
+
+  margin: 20px 0;
+
+  text-align: center;
+
+  color: #8993aa;
+
+  font-size: 14px;
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 650px) {
+  .bo-loc-phim {
+    width: calc(100% - 30px);
+
+    flex-direction: column;
+
+    align-items: stretch;
+
+    gap: 10px;
+
+    margin-bottom: 35px;
+  }
+
+  #chonTheLoai {
+    width: 100%;
+  }
+
+  #timKiemTheLoai {
+    width: 100%;
+  }
+}

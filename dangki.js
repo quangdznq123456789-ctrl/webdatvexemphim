@@ -21,11 +21,15 @@ function setupToggle(btnId, inputId) {
 
     if (isHidden) {
       input.type = "text";
+
       btn.textContent = "Ẩn";
+
       btn.setAttribute("aria-label", "Ẩn mật khẩu");
     } else {
       input.type = "password";
+
       btn.textContent = "Hiện";
+
       btn.setAttribute("aria-label", "Hiện mật khẩu");
     }
   });
@@ -35,7 +39,7 @@ setupToggle("togglePass", "password");
 
 setupToggle("toggleConfirmPass", "confirmPassword");
 
-form.addEventListener("submit", function (event) {
+form.addEventListener("submit", async function (event) {
   event.preventDefault();
 
   const fullname = document
@@ -48,6 +52,7 @@ form.addEventListener("submit", function (event) {
 
   const confirmPassword = confirmPasswordInput.value;
 
+  // Kiểm tra mật khẩu
   if (password !== confirmPassword) {
     matchError.textContent = "Mật khẩu xác nhận không khớp!";
 
@@ -60,47 +65,37 @@ form.addEventListener("submit", function (event) {
 
   matchError.style.display = "none";
 
-  let accounts = JSON.parse(localStorage.getItem("accounts")) || [];
+  try {
+    const response = await fetch("http://localhost:3000/api/dangky", {
+      method: "POST",
 
-  const phoneExists = accounts.some(function (account) {
-    return account.phone === phone;
-  });
+      headers: {
+        "Content-Type": "application/json",
+      },
 
-  if (phoneExists) {
-    alert("Số điện thoại đã tồn tại!");
+      body: JSON.stringify({
+        HoTen: fullname,
+        SoDienThoai: phone,
+        MatKhau: password,
+      }),
+    });
 
-    phoneInput.focus();
+    const result = await response.json();
 
-    return;
+    if (!response.ok) {
+      alert(result.message || "Đăng ký thất bại!");
+
+      return;
+    }
+
+    alert(result.message);
+
+    form.reset();
+
+    window.location.href = "./indexdangnhap.html";
+  } catch (error) {
+    console.error(error);
+
+    alert("Không thể kết nối đến Backend!");
   }
-
-  const passwordExists = accounts.some(function (account) {
-    return account.password === password;
-  });
-
-  if (passwordExists) {
-    alert("Mật khẩu đã tồn tại!");
-
-    passwordInput.focus();
-
-    return;
-  }
-
-  const newAccount = {
-    fullname: fullname,
-
-    phone: phone,
-
-    password: password,
-  };
-
-  accounts.push(newAccount);
-
-  localStorage.setItem("accounts", JSON.stringify(accounts));
-
-  alert("Đăng ký thành công!");
-
-  form.reset();
-
-  window.location.href = "./indexdangnhap.html";
 });

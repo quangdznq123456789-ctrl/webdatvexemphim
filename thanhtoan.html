@@ -5,405 +5,126 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>Trang Thanh Toán</title>
+    <title>Thanh toán</title>
 
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
-    />
-
-    <style>
-      * {
-        box-sizing: border-box;
-      }
-
-      body {
-        margin: 0;
-        background-color: #0b1120;
-        color: white;
-        font-family: Arial, sans-serif;
-      }
-
-      .header {
-        background-color: #111827;
-        padding: 25px;
-        margin-bottom: 30px;
-
-        border-bottom: 1px solid #273449;
-      }
-
-      .header h2 {
-        color: white;
-        font-size: 36px;
-        margin-bottom: 15px;
-      }
-
-      .header a {
-        color: #60a5fa;
-        text-decoration: none;
-        font-size: 18px;
-      }
-
-      .header a:hover {
-        text-decoration: underline;
-      }
-
-      .payment-box {
-        background-color: #111827;
-
-        border: 1px solid #273449;
-
-        border-radius: 20px;
-
-        padding: 30px;
-
-        margin-bottom: 25px;
-
-        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
-      }
-
-      .payment-box h3 {
-        color: #60a5fa;
-
-        margin-bottom: 25px;
-      }
-
-      .ticket {
-        padding: 20px 0;
-
-        border-bottom: 1px solid #273449;
-      }
-
-      .ticket h5 {
-        color: #60a5fa;
-
-        font-size: 24px;
-      }
-
-      .ticket p {
-        font-size: 17px;
-
-        color: #e5e7eb;
-      }
-
-      .payment-method {
-        display: block;
-
-        border: 2px solid #273449;
-
-        border-radius: 15px;
-
-        padding: 20px;
-
-        margin-bottom: 15px;
-
-        cursor: pointer;
-
-        background-color: #111827;
-
-        transition: 0.2s;
-      }
-
-      .payment-method:hover {
-        border-color: #3b82f6;
-      }
-
-      .payment-method.active {
-        border-color: #3b82f6;
-
-        background-color: #172554;
-      }
-
-      .payment-method strong {
-        font-size: 19px;
-
-        color: white;
-      }
-
-      .payment-method p {
-        color: #cbd5e1;
-      }
-
-      .payment-method input {
-        margin-right: 10px;
-      }
-
-      #thongTinNganHang {
-        display: none;
-
-        margin-top: 20px;
-
-        padding: 25px;
-
-        background-color: #0f172a;
-
-        border: 1px solid #273449;
-
-        border-radius: 15px;
-      }
-
-      #thongTinNganHang h4 {
-        color: #60a5fa;
-
-        margin-bottom: 20px;
-      }
-
-      #thongTinNganHang p {
-        color: #e5e7eb;
-
-        font-size: 17px;
-      }
-
-      .qr {
-        width: 220px;
-
-        max-width: 100%;
-
-        border-radius: 10px;
-      }
-
-      .total {
-        font-size: 25px;
-
-        font-weight: bold;
-
-        color: white;
-
-        text-align: right;
-      }
-
-      #tongTien {
-        color: #60a5fa;
-      }
-
-      #xacNhanThanhToan {
-        padding: 12px 30px;
-
-        font-size: 18px;
-
-        border-radius: 8px;
-      }
-    </style>
+    <link rel="stylesheet" href="thanhtoan.css" />
   </head>
 
   <body>
     <header class="header">
-      <h2>THANH TOÁN VÉ XEM PHIM</h2>
+      <div class="logo">CINEMA</div>
 
-      <a href="./giohang.html"> ← Quay lại giỏ vé </a>
+      <nav>
+        <a href="./dangnhapxong.html"> Trang chủ </a>
+
+        <a href="./vcuatoi.html"> Vé của tôi </a>
+      </nav>
     </header>
 
     <main class="container">
-      <div class="payment-box">
-        <h3>THÔNG TIN VÉ</h3>
+      <h1>THANH TOÁN</h1>
 
-        <div id="danhSachVe"></div>
+      <div class="thongtin">
+        <h2>Thông tin đặt vé</h2>
 
-        <hr />
+        <p>
+          Phim:
+          <strong id="phim"></strong>
+        </p>
 
-        <div class="total">
-          Tổng tiền:
+        <p>
+          Phòng:
+          <strong id="phong"></strong>
+        </p>
 
-          <span id="tongTien"> 0đ </span>
-        </div>
+        <p>
+          Ngày:
+          <strong id="ngay"></strong>
+        </p>
+
+        <p>
+          Giờ:
+          <strong id="gio"></strong>
+        </p>
+
+        <p>
+          Ghế:
+          <strong id="ghe"></strong>
+        </p>
+
+        <p>
+          Dịch vụ:
+          <strong id="dichvu"></strong>
+        </p>
+
+        <p>
+          Số lượng combo:
+          <strong id="soLuongDichVu"></strong>
+        </p>
+
+        <p id="nuocRow">
+          Nước:
+          <strong id="nuoc"></strong>
+        </p>
+
+        <p id="soLuongNuocRow">
+          Số lượng nước:
+          <strong id="soLuongNuoc"></strong>
+        </p>
       </div>
 
-      <div class="payment-box">
-        <h3>PHƯƠNG THỨC THANH TOÁN</h3>
+      <div class="tong">
+        Tổng tiền:
 
-        <label class="payment-method" id="quayMethod">
-          <input type="radio" name="payment" value="quay" />
+        <strong id="tongTien"> 0đ </strong>
+      </div>
 
-          <strong> THANH TOÁN TẠI QUẦY </strong>
+      <div class="phuong-thuc">
+        <h2>Phương thức thanh toán</h2>
 
-          <p class="mt-2 mb-0">
-            Bạn sẽ thanh toán trực tiếp tại quầy khi đến rạp nhận vé.
-          </p>
-        </label>
+        <label class="payment">
+          <input type="radio" name="payment" value="Thanh toán tại quầy" />
 
-        <label class="payment-method" id="bankMethod">
-          <input type="radio" name="payment" value="bank" />
+          <div>
+            <strong> Thanh toán tại quầy </strong>
 
-          <strong> THANH TOÁN BẰNG TÀI KHOẢN NGÂN HÀNG </strong>
-
-          <p class="mt-2 mb-0">
-            Chuyển khoản ngân hàng theo thông tin bên dưới.
-          </p>
-        </label>
-
-        <div id="thongTinNganHang">
-          <h4>THÔNG TIN CHUYỂN KHOẢN</h4>
-
-          <p>
-            <strong>Ngân hàng:</strong>
-            MB Bank
-          </p>
-
-          <p>
-            <strong>Số tài khoản:</strong>
-            0367265164
-          </p>
-
-          <p>
-            <strong>Chủ tài khoản:</strong>
-            DINH HONG QUANG
-          </p>
-
-          <p>
-            <strong>Nội dung chuyển khoản:</strong>
-            <span id="noiDungChuyenKhoan"> DATVE </span>
-          </p>
-
-          <div class="text-center mt-4">
-            <p>Quét mã QR để thanh toán</p>
-
-            <img src="./qr.jpg" alt="Mã QR thanh toán" class="qr" />
+            <p>Thanh toán khi đến rạp</p>
           </div>
-        </div>
+        </label>
+
+        <label class="payment">
+          <input type="radio" name="payment" value="Thanh toán ngân hàng" />
+
+          <div>
+            <strong> Thanh toán bằng tài khoản ngân hàng </strong>
+
+            <p>Chuyển khoản / quét QR</p>
+          </div>
+        </label>
       </div>
 
-      <div class="payment-box text-center">
-        <button id="xacNhanThanhToan" class="btn btn-primary btn-lg">
-          XÁC NHẬN THANH TOÁN
-        </button>
+      <div id="bankBox" class="bank-box" style="display: none">
+        <h3>Thông tin chuyển khoản</h3>
+
+        <p>Ngân hàng: MB Bank</p>
+
+        <p>Số tài khoản: 0367265164</p>
+
+        <p>Chủ tài khoản: ĐINH HỒNG QUANG</p>
+
+        <p>
+          Nội dung:
+          <strong id="noiDungCK"> </strong>
+        </p>
+
+        <div class="qr"><img src="./qr.jpg" alt="qr" /></div>
+
+        <p>Sau khi chuyển khoản, hãy bấm xác nhận.</p>
       </div>
+
+      <button id="btnThanhToan" class="btn">XÁC NHẬN ĐẶT VÉ</button>
     </main>
 
-    <script>
-      const danhSachVe = JSON.parse(localStorage.getItem("gioPhim")) || [];
-
-      const danhSachVeElement = document.getElementById("danhSachVe");
-
-      const tongTienElement = document.getElementById("tongTien");
-
-      let tongTien = 0;
-
-      if (danhSachVe.length === 0) {
-        danhSachVeElement.innerHTML = `
-
-                <p>
-                    Giỏ vé đang trống.
-                </p>
-
-            `;
-      } else {
-        danhSachVe.forEach(function (ve) {
-          tongTien += ve.tongTien;
-
-          const div = document.createElement("div");
-
-          div.className = "ticket";
-
-          div.innerHTML = `
-
-                        <h5>
-                            ${ve.tenPhim}
-                        </h5>
-
-                        <p>
-                             Ngày:
-                            ${ve.ngay}
-                        </p>
-
-                        <p>
-                             Giờ:
-                            ${ve.gio}
-                        </p>
-
-                        <p>
-                             Ghế:
-                            ${ve.ghe.join(", ")}
-                        </p>
-
-                        <p>
-                             Số vé:
-                            ${ve.soLuong}
-                        </p>
-
-                        <p>
-                             Thành tiền:
-                            <strong>
-                                ${ve.tongTien.toLocaleString("vi-VN")}đ
-                            </strong>
-                        </p>
-
-                    `;
-
-          danhSachVeElement.appendChild(div);
-        });
-      }
-
-      tongTienElement.textContent = tongTien.toLocaleString("vi-VN") + "đ";
-
-      const paymentMethods = document.querySelectorAll('input[name="payment"]');
-
-      const thongTinNganHang = document.getElementById("thongTinNganHang");
-
-      paymentMethods.forEach(function (method) {
-        method.addEventListener("change", function () {
-          document.querySelectorAll(".payment-method").forEach(function (item) {
-            item.classList.remove("active");
-          });
-
-          this.closest(".payment-method").classList.add("active");
-
-          if (this.value === "bank") {
-            thongTinNganHang.style.display = "block";
-          } else {
-            thongTinNganHang.style.display = "none";
-          }
-        });
-      });
-
-      const maDonHang = "VE" + Date.now();
-
-      document.getElementById("noiDungChuyenKhoan").textContent = maDonHang;
-
-      document
-        .getElementById("xacNhanThanhToan")
-        .addEventListener("click", function () {
-          const phuongThuc = document.querySelector(
-            'input[name="payment"]:checked',
-          );
-
-          if (!phuongThuc) {
-            alert("Vui lòng chọn phương thức thanh toán!");
-
-            return;
-          }
-
-          if (phuongThuc.value === "quay") {
-            alert(
-              "Đặt vé thành công!\n\n" +
-                "Phương thức: Thanh toán tại quầy\n" +
-                "Mã vé: " +
-                maDonHang +
-                "\n" +
-                "Tổng tiền: " +
-                tongTien.toLocaleString("vi-VN") +
-                "đ",
-              setTimeout(function () {
-                window.location.href = "./giohang.html";
-              }, 1000),
-            );
-
-            return;
-          }
-
-          if (phuongThuc.value === "bank") {
-            alert(
-              "thanh toán thành công " +
-                // "Vui lòng chuyển khoản " +
-                tongTien.toLocaleString("vi-VN") +
-                "đ\n\n" +
-                "Nội dung: " +
-                maDonHang,
-              setTimeout(function () {
-                window.location.href = "./giohang.html";
-              }, 1000),
-            );
-          }
-        });
-    </script>
+    <script src="thanhtoan.js"></script>
   </body>
 </html>

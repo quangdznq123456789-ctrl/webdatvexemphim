@@ -8,269 +8,51 @@
       href="./bootstrap/bootstrap-5.3.8-dist/css/bootstrap.min.css"
     />
     <link rel="icon" href="./icon.jpg" />
-    <link rel="stylesheet" href="./ht.css" />
+    <link rel="stylesheet" href="./httrangchu.css" />
     <title>Đặt vé xem phim</title>
   </head>
   <body>
-    <h2>PHIM ĐANG CHIẾU</h2>
+    <header class="header-user">
+      <div class="menu-trai">
+        <button type="button" onclick="cuonDenPhim('dangChieu')">
+          PHIM ĐANG CHIẾU
+        </button>
+
+        <button type="button" onclick="cuonDenPhim('ngungChieu')">
+          PHIM NGỪNG CHIẾU
+        </button>
+      </div>
+
+      <div class="menu-phai">
+        <button type="button">
+          <a href="./vcuatoi.html">VÉ CỦA TÔI</a>
+        </button>
+
+        <button type="button">
+          <a href="./index.html">ĐĂNG XUẤT</a>
+        </button>
+      </div>
+    </header>
+
     <h3 class="hoHo">
       Chào mừng bạn đến với Web đặt vé xem phim của nhóm mình
     </h3>
-    <br />
-    <button type="button" class="btn btn-success">
-      <a href="./giohang.html">GIỎ HÀNG CỦA TÔI</a>
-    </button>
-    <button type="button" class="btn btn-success">
-      <a href="./index.html">ĐĂNG XUẤT</a>
-    </button>
-    <br />
-    <div class="movie-list">
-      <div class="main">
-        <img src="./1.jpg" alt="phim nghỉ hè sợ nghỉ hưu" />
-        <h4>NGHỈ HÈ SỢ NGHỈ HƯU</h4>
-        <p>Thể loại : hài</p>
-        <p>Thời lượng : 117 phút</p>
-        <p>Khởi chiếu : 21/08/2026</p>
-        <a href="./nghihesonghihuu.html"
-          ><button type="button" class="btn btn-outline-primary">
-            ĐẶT VÉ
-          </button></a
-        >
-      </div>
-      <br />
-      <div class="main">
-        <img src="./spiderman.jpg" alt="phim spiderman" />
-        <h4>SPIDERMAN</h4>
-        <p>Thể loại : hành động</p>
-        <p>Thời lượng : 145 phút</p>
-        <p>Khởi chiếu : 31/07/2026</p>
-        <a href="./spiderman.html"
-          ><button type="button" class="btn btn-outline-primary">
-            ĐẶT VÉ
-          </button></a
-        >
-      </div>
-      <br />
-      <div class="main">
-        <img src="./3.jpg" alt="phim quy quyet: ranh gioi vo dinh" />
-        <h4>QUỶ QUYỆT: RANH GIỚI VÔ ĐỊNH</h4>
-        <p>Thể loại : kinh dị</p>
-        <p>Thời lượng : 106 phút</p>
-        <p>Khởi chiếu : 21/08/2026</p>
-        <a href="./quyquyet.html"
-          ><button type="button" class="btn btn-outline-primary">
-            ĐẶT VÉ
-          </button></a
-        >
-      </div>
-      <br />
-      <div class="main">
-        <img src="./THE ODYSSEY.jpg" alt="phim the odyssey" />
-        <h4>THE ODYSSEY</h4>
-        <p>Thể loại : Hành động , thần thoại</p>
-        <p>Thời lượng : 145 phút</p>
-        <p>Khởi chiếu : 31/07/2026</p>
-        <a href="./theodyssey.html"
-          ><button type="button" class="btn btn-outline-primary">
-            ĐẶT VÉ
-          </button></a
-        >
-      </div>
-      <br />
-      <div class="main">
-        <img src="./5.jpg" alt="PAW PATROL: PHIM KHỦNG LONG" />
-        <h4>PAW PATROL: PHIM KHỦNG LONG</h4>
-        <p>Thể loại : hành động , hoạt hình , phiêu lưu</p>
-        <p>Thời lượng : 89 phút</p>
-        <p>Khởi chiếu : 14/08/2026</p>
-        <a href="./paw patrol.html"
-          ><button type="button" class="btn btn-outline-primary">
-            ĐẶT VÉ
-          </button></a
-        >
-      </div>
-      <br />
-      <div class="main">
-        <img src="./NGÀY TÀN CỦA PHỐ OAK.jpg" alt="phim ngày tàn của phố oak" />
-        <h4>NGÀY TÀN CỦA PHỐ OAK</h4>
-        <p>Thể loại : hành động , hồi hộp , phiêu lưu</p>
-        <p>Thời lượng : 100 phút</p>
-        <p>Khởi chiếu : 14/08/2026</p>
-        <a href="./ngaytanoak.html"
-          ><button type="button" class="btn btn-outline-primary">
-            ĐẶT VÉ
-          </button></a
-        >
-      </div>
-      <br />
-      <div class="main">
-        <img
-          src="./7.jpg"
-          alt="ĐẠI CHIẾN NGƯỜI KHỔNG LỒ: LẦN TẤN CÔNG CUỐI CÙNG (CHIẾU LẠI 2026)"
-        />
-        <h4>
-          ĐẠI CHIẾN NGƯỜI KHỔNG LỒ: LẦN TẤN CÔNG CUỐI CÙNG (CHIẾU LẠI 2026)
-        </h4>
-        <p>Thể loại : hành động, hoạt hình , tâm lý</p>
-        <p>Thời lượng : 144 phút</p>
-        <p>Khởi chiếu : 14/08/2026</p>
-        <a href="./daichientitan.html"
-          ><button type="button" class="btn btn-outline-primary">
-            ĐẶT VÉ
-          </button></a
-        >
-      </div>
-      <br />
-      <div class="main">
-        <img src="./ĐIỂM MÙ.jpg" alt="phim điểm mù" />
-        <h4>ĐIỂM MÙ</h4>
-        <p>Thể loại : hồi hộp , tội phạm</p>
-        <p>Thời lượng : 105 phút</p>
-        <p>Khởi chiếu : 14/08/2026</p>
-        <a href="./diemmu.html"
-          ><button type="button" class="btn btn-outline-primary">
-            ĐẶT VÉ
-          </button></a
-        >
-      </div>
-      <br />
-      <div class="main">
-        <img src="./9.jpg" alt="AGITO: CUỘC CHIẾN SIÊU NĂNG LỰC" />
-        <h4>AGITO: CUỘC CHIẾN SIÊU NĂNG LỰC</h4>
-        <p>Thể loại : hành động , khoa học viễn tưởng</p>
-        <p>Thời lượng : 97 phút</p>
-        <p>Khởi chiếu : 14/08/2026</p>
-        <a href="./agito.html"
-          ><button type="button" class="btn btn-outline-primary">
-            ĐẶT VÉ
-          </button></a
-        >
-      </div>
-      <br />
-      <div class="main">
-        <img src="./THƯ TÌNH GỬI NGOẠI.jpg" alt="THƯ TÌNH GỬI NGOẠI" />
-        <h4>THƯ TÌNH GỬI NGOẠI</h4>
-        <p>Thể loại : gia đình , tâm lý</p>
-        <p>Thời lượng : 117 phút</p>
-        <p>Khởi chiếu : 07/08/2026</p>
-        <a href="./thutinhguingoai.html"
-          ><button type="button" class="btn btn-outline-primary">
-            ĐẶT VÉ
-          </button></a
-        >
-      </div>
-      <br />
-      <div class="main">
-        <img
-          src="./conan.jpg"
-          alt="PHIM ĐIỆN ẢNH THÁM TỬ LỪNG DANH CONAN: THIÊN THẦN XA NGÃ TRÊN XA LỘ "
-        />
-        <h4>
-          PHIM ĐIỆN ẢNH THÁM TỬ LỪNG DANH CONAN: THIÊN THẦN XA NGÃ TRÊN XA LỘ
-        </h4>
-        <p>Thể loại : bí ẩn, hành động , hoạt hình</p>
-        <p>Thời lượng : 109 phút</p>
-        <p>Khởi chiếu : 24/07/2026</p>
-        <a href="./conanthienthan.html"
-          ><button type="button" class="btn btn-outline-primary">
-            ĐẶT VÉ
-          </button></a
-        >
-      </div>
-      <br />
-      <div class="main">
-        <img
-          src="./14.jpg"
-          alt="UMAMUSUME: PRETTY DERBY - KHỞI ĐẦU KỶ NGUYÊN MỚI"
-        />
-        <h4>UMAMUSUME: PRETTY DERBY - KHỞI ĐẦU KỶ NGUYÊN MỚI</h4>
-        <p>Thể loại : hài , hoạt hình</p>
-        <p>Thời lượng : 108 phút</p>
-        <p>Khởi chiếu : 07/08/2026</p>
-        <a href="./umamusume.html"
-          ><button type="button" class="btn btn-outline-primary">
-            ĐẶT VÉ
-          </button></a
-        >
-      </div>
-      <br />
-      <div class="main">
-        <img src="./MA XƯỞNG HÒM.jpg" alt="MA XƯỞNG HÒM" />
-        <h4>MA XƯỞNG HÒM</h4>
-        <p>Thể loại : kinh dị</p>
-        <p>Thời lượng : 97 phút</p>
-        <p>Khởi chiếu : 07/08/2026</p>
-        <a href="./maxuonghom.html"
-          ><button type="button" class="btn btn-outline-primary">
-            ĐẶT VÉ
-          </button></a
-        >
-      </div>
-      <br />
-      <div class="main">
-        <img
-          src="./shin.jpg"
-          alt="PHIM SHIN – CẬU BÉ BÚT CHÌ: KỲ KỲ QUÁI QUÁI! KỲ NGHỈ YÊU QUÁI CỦA TỚ"
-        />
-        <h4>
-          PHIM SHIN – CẬU BÉ BÚT CHÌ: KỲ KỲ QUÁI QUÁI! KỲ NGHỈ YÊU QUÁI CỦA TỚ
-        </h4>
-        <p>Thể loại : hoạt hình, thần thoại</p>
-        <p>Thời lượng : 101 phút</p>
-        <p>Khởi chiếu : 21/08/2026</p>
-        <a href="./shin.html"
-          ><button type="button" class="btn btn-outline-primary">
-            ĐẶT VÉ
-          </button></a
-        >
-      </div>
-      <br />
-      <div class="main">
-        <img
-          src="./conan nang dâu.jpg"
-          alt="THÁM TỬ LỪNG DANH CONAN: NÀNG DÂU HALLOWEEN"
-        />
-        <h4>THÁM TỬ LỪNG DANH CONAN: NÀNG DÂU HALLOWEEN</h4>
-        <p>Thể loại : hoạt hình</p>
-        <p>Thời lượng : 111 phút</p>
-        <p>Khởi chiếu : 21/10/2022</p>
-        <a href="./conannangdau.html"
-          ><button type="button" class="btn btn-outline-primary">
-            ĐẶT VÉ
-          </button></a
-        >
-      </div>
-      <br />
-      <div class="main">
-        <img
-          src="./MINIONS & QUÁI VẬT.jpg"
-          alt="MINIONS & QUÁI VẬT: SỰ TRỞ LẠI CỦA GRU"
-        />
-        <h4>MINIONS & QUÁI VẬT: SỰ TRỞ LẠI CỦA GRU</h4>
-        <p>Thể loại : hoạt hình</p>
-        <p>Thời lượng : 90 phút</p>
-        <p>Khởi chiếu : 01/07/2026</p>
-        <a href="./MINIONS.html"
-          ><button type="button" class="btn btn-outline-primary">
-            ĐẶT VÉ
-          </button></a
-        >
-      </div>
-      <br />
-      <div class="main">
-        <img src="./HÀNH TRÌNH CỦA MOANA.jpg" alt="HÀNH TRÌNH CỦA MOANA" />
-        <h4>HÀNH TRÌNH CỦA MOANA</h4>
-        <p>Thể loại : gia đình , hài , hành động , phiêu lưu</p>
-        <p>Thời lượng : 116 phút</p>
-        <p>Khởi chiếu : 10/07/2022</p>
-        <a href="./hanhtrinhmoana.html"
-          ><button type="button" class="btn btn-outline-primary">
-            ĐẶT VÉ
-          </button></a
-        >
-      </div>
-      <br />
+    <div class="bo-loc-phim">
+      <input
+        type="text"
+        id="timKiemTheLoai"
+        placeholder="🔍 Tìm phim theo thể loại..."
+      />
+
+      <select id="chonTheLoai">
+        <option value="">Tất cả thể loại</option>
+      </select>
     </div>
+
+    <div class="movie-list" id="movieList"></div>
+
     <script src="./bootstrap/bootstrap-5.3.8-dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./trangchuuser.js"></script>
+    <!-- <script src="./danhsachphim.js"></script> -->
   </body>
 </html>
